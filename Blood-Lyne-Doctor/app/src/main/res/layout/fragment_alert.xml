@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.alert.AlertFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/donationTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Donation Type"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bloodGroupTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="44dp"
+                android:text="Blood Group"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/donationTypeTextView" />
+
+            <Spinner
+                android:id="@+id/donationTypeSpinner"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red_700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.626"
+                app:layout_constraintStart_toEndOf="@+id/donationTypeTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/bloodGroupSpinner"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/red_700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.677"
+                app:layout_constraintStart_toEndOf="@+id/bloodGroupTextView"
+                app:layout_constraintTop_toBottomOf="@+id/donationTypeSpinner" />
+
+            <EditText
+                android:id="@+id/donationTimeEditText"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                android:backgroundTint="@color/red_700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.621"
+                app:layout_constraintStart_toEndOf="@+id/donationTimeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/donationDateCalenderView" />
+
+            <TextView
+                android:id="@+id/donationDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Donation Date"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.462"
+                app:layout_constraintStart_toStartOf="parent"
+                android:backgroundTint="@color/red_700"
+                app:layout_constraintTop_toBottomOf="@+id/NoOfPintsRequiredTextView" />
+
+            <TextView
+                android:id="@+id/donationTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="Donation Time"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/donationDateCalenderView" />
+
+            <CalendarView
+                android:id="@+id/donationDateCalenderView"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/red_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/donationDateTextView" />
+
+            <Button
+                android:id="@+id/sendDonationAlertButton"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Send Alert"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/donationTimeEditText" />
+
+            <TextView
+                android:id="@+id/NoOfPintsRequiredTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:text="Pints Required"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bloodGroupTextView" />
+
+            <EditText
+                android:id="@+id/NoOfPintsRequiredEditText"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.626"
+                android:backgroundTint="@color/red_700"
+                app:layout_constraintStart_toEndOf="@+id/NoOfPintsRequiredTextView"
+                app:layout_constraintTop_toBottomOf="@+id/bloodGroupSpinner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
